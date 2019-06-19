@@ -25,10 +25,13 @@ public class MusicUnpack extends Thread{
 	private static ArrayList<String> paths;
 	public MusicUnpack(String path) {
 		// TODO Auto-generated constructor stub
-		paths=new ArrayList<String>();
-		travelPath(path);
-		if(paths.isEmpty()){
-			System.out.println("Path is empty!");
+		if(paths==null){
+			paths=new ArrayList<String>();
+			travelPath(path);
+			if(paths.isEmpty()){
+				System.out.println("Path is empty!");
+			}
+			System.out.println("size:"+paths.size());
 		}
 	}
 	private void travelPath(String path){
